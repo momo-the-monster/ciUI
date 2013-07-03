@@ -2175,19 +2175,18 @@ protected:
         bool success = true;
         switch(_kind)
         {
-            case CI_UI_FONT_LARGE:              
-				fontLarge = Font(loadAsset(filename), fontsize);
+            case CI_UI_FONT_LARGE:
+				fontLarge = Font(loadAsset("ciui/" + filename), fontsize);
                 font_large = gl::TextureFont::create(fontLarge);
                 break; 
                 
             case CI_UI_FONT_MEDIUM:
-                fontMedium = Font(loadAsset(filename), fontsize);             
+				fontMedium = Font(loadAsset("ciui/" + filename), fontsize);        
                 font_medium = gl::TextureFont::create(fontMedium);
-                
                 break; 
                 
             case CI_UI_FONT_SMALL:
-				fontSmall = Font(loadAsset(filename), fontsize);
+				fontSmall = Font(loadAsset("ciui/" + filename), fontsize);
                 font_small = gl::TextureFont::create(fontSmall);
 
                 break; 
